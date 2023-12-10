@@ -2,7 +2,7 @@
 # Mouse wiggler
 
 import mouse
-import random
+from random import randrange
 
 from time import sleep
 
@@ -18,10 +18,10 @@ def run(start_position):
     print(f"{current}")
 
     while True:
-        x_change = random.randrange(11, 110, 1)
-        y_change = random.randrange(11, 110, 1)
-        mouse.move(current[0]+x_change, current[1]+y_change, duration=1)
-        waiting = random.randrange(11, 54, 1)
+        x_change = randrange(11, 110, 1)
+        y_change = randrange(11, 110, 1)
+        mouse.move(current[0] + x_change, current[1] + y_change, duration=1)
+        waiting = randrange(11, 54, 1)
         sleep(waiting)
 
 
