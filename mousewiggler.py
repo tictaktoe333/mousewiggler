@@ -18,10 +18,12 @@ def run(start_position):
     print(f"{current}")
 
     while True:
-        x_change = randrange(11, 110, 1)
-        y_change = randrange(11, 110, 1)
-        mouse.move(current[0] + x_change, current[1] + y_change, duration=1)
-        waiting = randrange(11, 54, 1)
+        x_change = randrange(11, 50, 1)
+        y_change = randrange(11, 50, 1)
+        print(current[0])
+        mouse.move(current[0] + x_change, current[1] + y_change, True, duration=1)
+        waiting = randrange(50, 61, 1)
+        print(waiting)
         sleep(waiting)
 
 
